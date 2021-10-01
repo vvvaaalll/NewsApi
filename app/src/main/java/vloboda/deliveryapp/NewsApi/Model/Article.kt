@@ -1,6 +1,7 @@
 package vloboda.deliveryapp.NewsApi.Model
+import java.io.Serializable;
 
-class Article {
+class Article : Serializable{
 
     var author:String?=null
     var title:String?=null

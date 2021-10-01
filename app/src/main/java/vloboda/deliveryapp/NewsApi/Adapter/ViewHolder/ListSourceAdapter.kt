@@ -2,10 +2,12 @@ package vloboda.deliveryapp.NewsApi.Adapter.ViewHolder
 
 import android.content.Context
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_NEW_TASK
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import vloboda.deliveryapp.NewsApi.Interface.ItemClickListener
@@ -13,6 +15,10 @@ import vloboda.deliveryapp.NewsApi.Model.WebSite
 import vloboda.deliveryapp.NewsApi.NewsPage
 import vloboda.deliveryapp.NewsApi.NewsPageActivity
 import vloboda.deliveryapp.NewsApi.R
+import androidx.core.content.ContextCompat.startActivity
+
+
+
 
 class ListSourceAdapter (private val context: Context, private val webSite: WebSite):RecyclerView.Adapter<ListSourceViewHolder>(){
 
@@ -31,11 +37,13 @@ class ListSourceAdapter (private val context: Context, private val webSite: WebS
         holder.setItemClickListener(object : ItemClickListener {
             override fun onClick(view: View, position: Int) {
 
-                val intent = Intent(context, NewsPageActivity::class.java)
+
+                val intent = Intent(context, NewsPage::class.java)
                 intent.putExtra("position", position)
                 intent.putExtra("webSite", webSite)
-                context.startActivity(Intent(context, NewsPage::class.java))
-                Toast.makeText(context, "ujutro uz kavicu", Toast.LENGTH_SHORT).show()
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                context.startActivity(intent)
+
 
 
             }

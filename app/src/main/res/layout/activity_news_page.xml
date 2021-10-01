@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="vloboda.deliveryapp.NewsApi.NewsPage">
 
-   <androidx.viewpager2.widget.ViewPager2
+ <!--  <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/news_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,5 +15,12 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
+-->
+
+   <WebView
+       android:id="@+id/WebView"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+      />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
