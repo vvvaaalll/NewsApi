@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vloboda.deliveryapp.NewsApi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FactoryProject">
+        <activity
+            android:name="vloboda.deliveryapp.NewsApi.NewsPageActivity"
+            android:exported="true" />
+        <activity
+            android:name="vloboda.deliveryapp.NewsApi.NewsPage"
+            android:exported="true" />
+        <activity
+            android:name="vloboda.deliveryapp.NewsApi.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
